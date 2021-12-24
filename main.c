@@ -242,7 +242,7 @@ void read_input(InputBuffer* input_buffer)
         exit(EXIT_FAILURE);
     }
 
-    input_buffer->input_length = bytes_read - 1;
+    input_buffer->input_length = bytes_read - 1; //因为这里getline会读入换行符，所以要减1
     input_buffer->buffer[bytes_read - 1] = 0;
 }
 
